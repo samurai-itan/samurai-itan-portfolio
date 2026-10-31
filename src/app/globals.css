@@ -111,7 +111,14 @@ a { color:inherit; text-decoration:none; }
 .position-title,.previous-card p { color:var(--muted); font-size:11px; margin:0; }
 .experience-card>p:last-of-type { font-size:12px; line-height:1.55; color:var(--muted); margin:0; }
 .experience-card i { margin:12px 0 9px; }
-.card-arrow { position:absolute; width:15px; height:15px; bottom:15px; left:17px; }
+.card-arrow {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  bottom: 15px;
+  right: 15px;
+  left: auto;
+}
 .previous-list { display:grid; gap:9px; }
 .previous-card { padding:14px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:62px; }
 .previous-card h3 { font-size:14px; margin-bottom:4px; } .previous-card svg { width:15px; height:15px; }
@@ -140,7 +147,16 @@ a { color:inherit; text-decoration:none; }
  .hero { min-height:660px; align-items:flex-start; padding:45px 0 80px; }
  .hero-copy { width:100%; } .hero h1 { font-size:clamp(58px,17vw,84px); margin-top:25px; }
  .hero-headline { max-width:300px; font-size:23px; } .hero-intro { max-width:330px; font-size:13px; }
- .hero-art { width:90%; height:48%; top:auto; bottom:20px; right:-10%; opacity:.92; }
+.hero-art {
+  width:90%;
+  height:48%;
+  top:auto;
+  bottom:20px;
+  right:0;
+  left:0;
+  margin:0 auto;
+  opacity:.92;
+}
  .hero-bottom-note { bottom:12px; font-size:8px; }
  .content-section { padding:34px 0 36px; }
  .about-grid,.contact-grid { grid-template-columns:1fr; gap:20px; padding-top:22px; }
@@ -148,7 +164,11 @@ a { color:inherit; text-decoration:none; }
  .stats-grid { grid-template-columns:1fr 1fr; gap:9px; } .stat-card { min-height:130px; padding:15px 13px; }
  .stat-card strong { font-size:32px; } .stat-card span { font-size:8px; }
  .experience-grid { grid-template-columns:1fr; gap:28px; } .current-cards { grid-template-columns:1fr 1fr; }
- .current-card { min-height:210px; padding:15px 12px; } .experience-card h3 { font-size:14px; }
+ .current-card {
+  min-height: 210px;
+  padding: 15px 12px 38px;
+}
+ .experience-card h3 { font-size:14px; }
  .experience-card>p:last-of-type { font-size:11px; }
  .previous-column { border-left:0; border-top:1px solid var(--line); padding:25px 0 0; }
  .contact-grid h2 { font-size:36px; } .contact-links { grid-template-columns:1fr; }
