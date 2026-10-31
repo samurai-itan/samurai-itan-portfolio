@@ -25,9 +25,32 @@ a { color:inherit; text-decoration:none; }
 .hero-copy { width:52%; position:relative; z-index:2; }
 .section-label { display:flex; align-items:center; gap:13px; }
 .section-label i { width:28px; height:1px; background:var(--line); display:block; }
-.hero h1 { font-family:'Manrope',sans-serif; font-size:clamp(64px,8vw,112px); line-height:.88; letter-spacing:-.075em; font-weight:800; margin:34px 0 20px; text-transform:uppercase; }
-.hero-headline { font-size:clamp(20px,2.1vw,28px); line-height:1.2; margin:0 0 16px; max-width:420px; }
-.hero-intro { font-size:14px; line-height:1.65; max-width:420px; color:var(--muted); margin:0; }
+.hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(64px, 8vw, 112px);
+  line-height: .88;
+  letter-spacing: -.075em;
+  font-weight: 800;
+  margin: 34px 0 16px;
+  text-transform: uppercase;
+}
+
+.hero-headline {
+  font-size: clamp(20px, 2.1vw, 28px);
+  line-height: 1.2;
+  margin: 0 0 16px;
+  max-width: 420px;
+  text-align: left;
+}
+
+.hero-intro {
+  font-size: 14px;
+  line-height: 1.65;
+  max-width: 420px;
+  color: var(--muted);
+  margin: 0;
+  text-align: left;
+}
 .social-row { display:flex; align-items:center; gap:22px; margin-top:30px; }
 .social-row a { width:24px; height:24px; display:grid; place-items:center; transition:transform .2s ease; }
 .social-row a:hover { transform:translateY(-3px); } .social-row svg { width:17px; height:17px; stroke-width:1.8; }
@@ -45,7 +68,25 @@ a { color:inherit; text-decoration:none; }
   filter: none;
 }
 .hero-bottom-note { position:absolute; bottom:25px; left:0; display:flex; align-items:center; gap:10px; color:var(--muted); }
-.hero-bottom-note span { width:7px; height:7px; background:#222; border-radius:50%; }
+.hero-bottom-note span {
+  width: 8px;
+  height: 8px;
+  background: #35c979;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(53, 201, 121, 0.6);
+  animation: green-pulse 2s ease-in-out infinite;
+}
+
+@keyframes green-pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 6px rgba(53, 201, 121, 0.6);
+  }
+  50% {
+    opacity: 0.45;
+    box-shadow: 0 0 2px rgba(53, 201, 121, 0.2);
+  }
+}
 .content-section { padding:44px 0 48px; border-bottom:1px solid var(--line); scroll-margin-top:24px; }
 .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:9%; padding-top:28px; }
 .about-grid h2,.contact-grid h2 { font-family:'Manrope',sans-serif; font-size:clamp(24px, 2.5vw, 34px); line-height:1.12; letter-spacing:-.045em; margin:0; max-width:520px; }
