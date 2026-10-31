@@ -157,12 +157,10 @@ export default function Home() {
 
 
       <footer className="footer">
-        <span>{portfolio.shortName}</span>
-        <a href="#top">
-          BACK TO TOP <ArrowUp />
-        </a>
-        <span>WEB3 COMMUNITY / {new Date().getFullYear()}</span>
-      </footer>
-    </main>
-  );
+  <a href="#top">
+    BACK TO TOP <ArrowUp />
+  </a>
+</footer>
+</main>
+);
 }
