@@ -53,7 +53,7 @@ export const portfolio = {
   ],
  
 contacts: [
-  { label: "CV", value: "View my resume", href: "/cv.pdf" },
+  { label: "CV", value: "View my resume", href: "/CV.pdf" },
   { label: "X", value: "@samurai_itan", href: "https://x.com/samurai_itan" },
   { label: "Telegram", value: "@samurai_itan", href: "https://t.me/samurai_itan" },
   { label: "Email", value: "samurai.itan@gmail.com", href: "mailto:samurai.itan@gmail.com" }
