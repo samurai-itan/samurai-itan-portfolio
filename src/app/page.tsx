@@ -38,39 +38,8 @@ export default function Home() {
 
           <p className="hero-headline">{portfolio.headline}</p>
           <p className="hero-intro">{portfolio.intro}</p>
+</div>
 
-          <div className="social-row" aria-label="Social links">
-            <a
-              href="https://x.com/samurai_itan"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="X"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                width="20"
-                height="20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.3-8.4L1.8 2h6.5l4.4 6.9L18.9 2Zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20Z" />
-              </svg>
-            </a>
-
-            <a
-              href="https://t.me/samurai_itan"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Telegram"
-            >
-              <Send />
-            </a>
-
-            <a href="mailto:samurai.itan@gmail.com" aria-label="Email">
-              <Mail />
-            </a>
-          </div>
-        </div>
 
         <div className="hero-art" aria-hidden="true">
           <Image
