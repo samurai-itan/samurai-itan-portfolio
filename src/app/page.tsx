@@ -27,17 +27,17 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-copy">
-          <SectionLabel number="01">{portfolio.role.toUpperCase()}</SectionLabel>
+       <div className="hero-copy">
+  <SectionLabel number="01">{portfolio.role.toUpperCase()}</SectionLabel>
 
-          <h1>
-            {portfolio.name.split(" ")[0]}
-            <br />
-            {portfolio.name.split(" ").slice(1).join(" ")}
-          </h1>
+  <img
+    src="/images/samurai_text.png"
+    alt="Samurai Itan"
+    className="hero-name-image"
+  />
 
-          <p className="hero-headline">{portfolio.headline}</p>
-          <p className="hero-intro">{portfolio.intro}</p>
+  <p className="hero-headline">{portfolio.headline}</p>
+  <p className="hero-intro">{portfolio.intro}</p>
 </div>
 
 
