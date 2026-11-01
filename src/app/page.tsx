@@ -1,9 +1,10 @@
+
 "use client";
 
 import { useState } from "react";
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { ArrowUpRight, Mail, Send, ArrowUp } from "lucide-react";
+import { ArrowUpRight, ArrowUp } from "lucide-react";
 import { portfolio, navigation } from "@/data/portfolio";
 
 function SectionLabel({ number, children }: { number: string; children: ReactNode }) {
@@ -23,35 +24,39 @@ export default function Home() {
     <main className={`page-shell ${lanternOn ? "lantern-active" : ""}`}>
       <header className="topbar">
         <button
-  type="button"
-  className={`lantern-button ${lanternOn ? "is-on" : ""}`}
-  onClick={() => setLanternOn(!lanternOn)}
-  aria-label="Toggle lantern light"
-  aria-pressed={lanternOn}
->
-  <img src="/images/lantern.png" alt="" />
-</button>
+          type="button"
+          className={`lantern-button ${lanternOn ? "is-on" : ""}`}
+          onClick={() => setLanternOn((previous) => !previous)}
+          aria-label="Toggle lantern light"
+          aria-pressed={lanternOn}
+        >
+          <img src="/images/lantern.png" alt="" />
+        </button>
+
         <nav aria-label="Main navigation">
           {navigation.map((item) => (
-            <a key={item.href} href={item.href}>{item.label}</a>
+            <a key={item.href} href={item.href}>
+              {item.label}
+            </a>
           ))}
         </nav>
       </header>
 
       <section className="hero" id="top">
-       <div className="hero-copy">
-  <SectionLabel number="01">{portfolio.role.toUpperCase()}</SectionLabel>
+        <div className="hero-copy">
+          <SectionLabel number="01">
+            {portfolio.role.toUpperCase()}
+          </SectionLabel>
 
-  <img
-    src="/images/samurai_text.png"
-    alt="Samurai Itan"
-    className="hero-name-image"
-  />
+          <img
+            src="/images/samurai_text.png"
+            alt="Samurai Itan"
+            className="hero-name-image"
+          />
 
-  <p className="hero-headline">{portfolio.headline}</p>
-  <p className="hero-intro">{portfolio.intro}</p>
-</div>
-
+          <p className="hero-headline">{portfolio.headline}</p>
+          <p className="hero-intro">{portfolio.intro}</p>
+        </div>
 
         <div className="hero-art" aria-hidden="true">
           <Image
@@ -139,40 +144,38 @@ export default function Home() {
       <section className="content-section contact-section" id="contact">
         <SectionLabel number="04">CONTACT</SectionLabel>
 
-        
-<div className="contact-grid">
-  <div className="contact-heading">
-    <h2>Let’s work together.</h2>
-    <p>
-      Open to new opportunities, collaborations and interesting projects.
-    </p>
-  </div>
+        <div className="contact-grid">
+          <div className="contact-heading">
+            <h2>Let’s work together.</h2>
+            <p>
+              Open to new opportunities, collaborations and interesting projects.
+            </p>
+          </div>
 
-  <div className="contact-content">
-    <div className="contact-links">
-      {portfolio.contacts.map((contact) => (
-        <a
-          href={contact.href}
-          key={contact.label}
-          target={contact.href.startsWith("mailto:") ? undefined : "_blank"}
-          rel="noreferrer"
-        >
-          <span>{contact.label}</span>
-          <strong>{contact.value}</strong>
-          <ArrowUpRight />
-        </a>
-      ))}
-    </div>
-  </div>
-</div>
-</section>
-
+          <div className="contact-content">
+            <div className="contact-links">
+              {portfolio.contacts.map((contact) => (
+                <a
+                  href={contact.href}
+                  key={contact.label}
+                  target={contact.href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel="noreferrer"
+                >
+                  <span>{contact.label}</span>
+                  <strong>{contact.value}</strong>
+                  <ArrowUpRight />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <footer className="footer">
-  <a href="#top">
-    BACK TO TOP <ArrowUp />
-  </a>
-</footer>
-</main>
-);
+        <a href="#top">
+          BACK TO TOP <ArrowUp />
+        </a>
+      </footer>
+    </main>
+  );
 }

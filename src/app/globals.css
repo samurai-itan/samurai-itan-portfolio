@@ -191,6 +191,22 @@ a {
   display: block;
 }
 
+.hero-logo-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 34px 0 16px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.hero-logo-button:focus-visible {
+  outline: 1px solid var(--line);
+  outline-offset: 6px;
+}
+
 .hero-name-image {
   display: block;
   width: 100%;
@@ -200,6 +216,64 @@ a {
   mix-blend-mode: multiply;
   transform: translateX(-100px);
 }
+
+.brush-reveal {
+  animation: brush-write 4.5s cubic-bezier(0.45, 0, 0.25, 1) both;
+}
+
+@keyframes brush-write {
+  0% {
+    clip-path: polygon(
+      0 0, 0 0,
+      0 20%, 0 40%,
+      0 60%, 0 80%,
+      0 100%, 0 100%
+    );
+  }
+
+  25% {
+    clip-path: polygon(
+      0 0, 38% 0,
+      33% 12%, 43% 24%,
+      35% 38%, 46% 50%,
+      37% 64%, 44% 78%,
+      34% 91%, 40% 100%,
+      0 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0 0, 66% 0,
+      61% 12%, 72% 24%,
+      63% 38%, 75% 50%,
+      65% 64%, 73% 78%,
+      62% 91%, 69% 100%,
+      0 100%
+    );
+  }
+
+  75% {
+    clip-path: polygon(
+      0 0, 88% 0,
+      83% 12%, 94% 24%,
+      85% 38%, 96% 50%,
+      86% 64%, 94% 78%,
+      84% 91%, 91% 100%,
+      0 100%
+    );
+  }
+
+  100% {
+    clip-path: polygon(
+      0 0, 100% 0,
+      100% 20%, 100% 40%,
+      100% 60%, 100% 80%,
+      100% 100%, 0 100%
+    );
+  }
+}
+
 
 .hero-headline {
   font-size: clamp(20px, 2.1vw, 28px);
