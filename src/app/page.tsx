@@ -1,4 +1,6 @@
+"use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { ArrowUpRight, Mail, Send, ArrowUp } from "lucide-react";
@@ -15,10 +17,20 @@ function SectionLabel({ number, children }: { number: string; children: ReactNod
 }
 
 export default function Home() {
+  const [lanternOn, setLanternOn] = useState(false);
+
   return (
-    <main className="page-shell">
+    <main className={`page-shell ${lanternOn ? "lantern-active" : ""}`}>
       <header className="topbar">
-        <a className="wordmark" href="#top">{portfolio.shortName}</a>
+        <button
+  type="button"
+  className={`lantern-button ${lanternOn ? "is-on" : ""}`}
+  onClick={() => setLanternOn(!lanternOn)}
+  aria-label="Toggle lantern light"
+  aria-pressed={lanternOn}
+>
+  <img src="/images/lantern.png" alt="" />
+</button>
         <nav aria-label="Main navigation">
           {navigation.map((item) => (
             <a key={item.href} href={item.href}>{item.label}</a>
