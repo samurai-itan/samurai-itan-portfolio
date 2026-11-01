@@ -687,6 +687,7 @@ a {
   }
 }
 
+
 /* Mobile */
 
 @media (max-width: 640px) {
@@ -701,9 +702,9 @@ a {
   .topbar {
     min-height: 70px;
     align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 12px;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 8px;
     padding: 14px 0;
   }
 
@@ -715,18 +716,22 @@ a {
 
   .lantern-button img {
     width: 62px;
-    margin-top: 8px;
+    margin-top: -8px;
   }
 
   .topbar nav {
-    width: 100%;
-    gap: 18px;
-    overflow-x: auto;
-    padding-bottom: 2px;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    overflow: visible;
+    padding: 0;
+    margin-top: 12px;
   }
 
   .topbar nav a {
-    font-size: 9px;
+    font-size: 8px;
     white-space: nowrap;
   }
 
@@ -739,6 +744,10 @@ a {
   .hero-copy {
     width: 100%;
   }
+
+ .hero-name-image {
+  transform: translateX(-70px);
+}
 
   .hero h1 {
     font-size: clamp(58px, 17vw, 84px);
@@ -764,6 +773,7 @@ a {
     left: 0;
     margin: 0 auto;
     opacity: 0.92;
+    transform: translateX(-20px);
   }
 
   .hero-bottom-note {
@@ -851,7 +861,6 @@ a {
   }
 }
 
-/* Reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
   html {
